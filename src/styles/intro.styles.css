@@ -1,0 +1,44 @@
+.intro-container {
+    width: 400px !important;
+    height: 600px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+
+.intro-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-header {
+    font-size: 2rem;
+    max-width: 30vw;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin: 4rem;
+}
+
+.intro-sub-title {
+    max-width: 30vw;
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    margin: 4rem;
+}
+
+.intro-score {
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    margin-bottom: 3rem;
+}

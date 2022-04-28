@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
 
+import { useDispatch } from 'react-redux';
+import { fetchquestions } from './redux/quiz.redux.slice';
+import { Routes, Route } from 'react-router-dom';
+
+import QuizIntro from './components/QuizIntro';
+import Quiz from './components/Quiz';
+import Score from './components/Score';
+import NotFound from './components/helpers/NotFound';
+
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchquestions());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='App'>
+      <Routes>
+        <Route path='/' element={<QuizIntro />} />
+        <Route path='/quiz' element={<Quiz />} />
+        <Route path='/score' element={<Score />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </main>
   );
 }
 

@@ -1,0 +1,9 @@
+.quiz-container {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #e0e0e0;
+
+}
